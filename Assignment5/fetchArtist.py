@@ -24,8 +24,20 @@ def fetchArtistId(name):
 
 def fetchArtistInfo(artist_id):
     """Using the Spotify API, takes a string representing the id and
-`   returns a dictionary including the keys 'followers', 'genres', 
+    returns a dictionary including the keys 'followers', 'genres', 
     'id', 'name', and 'popularity'.
     """
-    pass
+    url = "https://api.spotify.com/v1/artists/" + artist_id
+    req = requests.get(url)
+    if req.ok == False:
+        return 'Error: bad Spotify API URL or similar error'
+    data = req.json()
+    #print data
+    artist_dict = {}
+    artist_dict['followers'] = int(data[u'followers']['total'])
+    artist_dict['genres'] = data[u'name']
+    artist_dict['id'] = data[u'id']
+    artist_dict['name'] = data[u'name']
+    artist_dict['popularity'] = int(data[u'popularity'])
+    return artist_dict
 
