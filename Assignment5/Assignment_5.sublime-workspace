@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"album",
+				"album_info_list"
+			],
+			[
+				"write",
+				"writeAlbumsTable"
+			],
+			[
+				"artist_in",
+				"artist_info_list"
+			],
+			[
+				"fetchAl",
+				"fetchAlbumInfo"
+			],
+			[
+				"fetch",
+				"fetchArtistId"
+			],
+			[
+				"albums_",
+				"album_info_list"
+			],
+			[
 				"artis",
 				"artist_id"
 			]
@@ -12,58 +40,26 @@
 	"buffers":
 	[
 		{
-			"file": "__init__.py",
+			"file": "/C/Users/Kyle/OneDrive/Graduate School/cfss/mypower.py",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 206,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "barChart.py",
+			"file": "/C/Users/Kyle/OneDrive/Graduate School/cfss/powersof2.py",
 			"settings":
 			{
-				"buffer_size": 1377,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "csvUtils.py",
-			"settings":
-			{
-				"buffer_size": 644,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "fetchAlbums.py",
-			"settings":
-			{
-				"buffer_size": 375,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "fetchArtist.py",
-			"settings":
-			{
-				"buffer_size": 794,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "main.py",
-			"settings":
-			{
-				"buffer_size": 343,
-				"line_ending": "Unix"
+				"buffer_size": 71,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 588.0,
+		"height": 554.0,
 		"selected_items":
 		[
 			[
@@ -107,14 +103,20 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/Assignment5/barChart.py",
+		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/Assignment5/main.py",
 		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/Assignment5/fetchArtist.py",
 		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/Assignment5/fetchAlbums.py",
+		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/Assignment5/csvUtils.py",
+		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/Assignment5/tests.py",
+		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/.gitignore",
+		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/Assignment5/.gitignore",
+		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/Assignment5/__init__.py",
 		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/create_permits_hydepark_csv.sh",
 		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/parse.py",
 		"/C/Users/Kyle/OneDrive/Graduate School/cfss/myFile.txt",
 		"/C/Users/Kyle/OneDrive/Graduate School/cfss/test",
 		"/C/Users/Kyle/OneDrive/Graduate School/cfss/class6.1.py",
-		"/C/Users/Kyle/OneDrive/Graduate School/cfss/cfss-homework-vonbaronhans/.gitignore",
 		"/C/Users/Kyle/OneDrive/Graduate School/cfss/plowData.dat",
 		"/C/cygwin64/home/Kyle/cfss.sh",
 		"/C/cygwin64/home/Kyle/.bashrc",
@@ -141,6 +143,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"test",
+			"artist_dict",
+			"test_list",
+			"str",
+			"','",
 			"illinois_bill_id",
 			"il_bill_id_api",
 			"permits_list"
@@ -161,181 +168,64 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "__init__.py",
+					"file": "/C/Users/Kyle/OneDrive/Graduate School/cfss/mypower.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "barChart.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1377,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								206,
+								206
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "csvUtils.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 644,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "fetchAlbums.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 375,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "fetchArtist.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 794,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "main.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 343,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Kyle/OneDrive/Graduate School/cfss/powersof2.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 71,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								38
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -388,16 +278,20 @@
 		"selected_items":
 		[
 			[
+				".git",
+				".gitignore"
+			],
+			[
+				"",
+				"fetchArtist.py"
+			],
+			[
 				"test",
 				"C:\\Users\\Kyle\\OneDrive\\Graduate School\\cfss\\test"
 			],
 			[
 				"my",
 				"C:\\Users\\Kyle\\OneDrive\\Graduate School\\cfss\\myFile.txt"
-			],
-			[
-				"",
-				"C:\\Users\\Kyle\\OneDrive\\Graduate School\\cfss\\cfss-homework-vonbaronhans\\parse.py"
 			]
 		],
 		"width": 0.0
