@@ -2,8 +2,12 @@ from fetchArtist import fetchArtistId
 import requests
 import pandas as pd
 
-#print "Busta Rhymes", fetchArtistId("Busta Rhymes")
+# print "Busta Rhymes", fetchArtistId("Busta Rhymes")
 # 1YfEcTuGvBQ8xSD1f53UnK
+# print "Punch Brothers", fetchArtistId("Punch Brothers")
+# 4gFssfOmWNY3LfIZ3zyoy4
+
+
 #Part 1.1
 def getRelatedArtists(artistID):
 	relatedArtistIDs = []
@@ -40,16 +44,18 @@ def getDepthEdges(artistID, depth):
 
 #print getDepthEdges("1YfEcTuGvBQ8xSD1f53UnK", 1)
 
-def getDepthList(artistID, depth):
+def getEdgeList(artistID, depth):
 	depth_edges = getDepthEdges(artistID, depth)
 	edgeList = pd.DataFrame(depth_edges)
 	return edgeList
 
-#df = getDepthList("1YfEcTuGvBQ8xSD1f53UnK", 1)
+#df = getEdgeList("1YfEcTuGvBQ8xSD1f53UnK", 1)
 #print df.shape
 
 def writeEdgeList(artistID, depth, filename):
-	x = getDepthList(artistID, depth)
-	x.to_csv(filename, index=False)
+	x = getEdgeList(artistID, depth)
+	x.to_csv(filename, index=False, header=['Artist', 'Related Artist'])
 
-#writeEdgeList("1YfEcTuGvBQ8xSD1f53UnK", 1, "Busta's Bruthas.csv")
+#writeEdgeList("1YfEcTuGvBQ8xSD1f53UnK", 2, "Busta's Bruthas.csv")
+
+#writeEdgeList("4gFssfOmWNY3LfIZ3zyoy4", 2, "Punch Bruthas.csv")
