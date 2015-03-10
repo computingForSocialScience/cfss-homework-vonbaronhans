@@ -114,8 +114,8 @@ def createNewPlaylist(inputName):
         db.commit()
 
 
-createNewPlaylist("Busta Rhymes")
-createNewPlaylist("Starbomb")
+#createNewPlaylist("Busta Rhymes")
+#createNewPlaylist("Starbomb")
 
 @app.route('/')
 def make_index_resp():
@@ -126,6 +126,13 @@ def make_index_resp():
 
 @app.route('/playlists/')
 def make_playlists_resp():
+    cur = db.cursor()
+    sql = '''
+        SELECT id,rootArtist
+        FROM playlists
+        ORDER BY id '''
+    cur.execute(sql)
+    playlists = cur.fetchall()
     return render_template('playlists.html',playlists=playlists)
 
 
@@ -148,5 +155,5 @@ def add_playlist():
 
 
 if __name__ == '__main__':
-    app.debug=False
+    app.debug=True
     app.run()
