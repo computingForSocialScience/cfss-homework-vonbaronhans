@@ -43,13 +43,13 @@ def createNewPlaylist(inputName):
         artist = fetchArtistInfo(artist_id)
         artist_name = artist['name']
         artist_names.append(artist_name)
-        print artist_id, artist_name
+        #print artist_id, artist_name
 
         album_id_list = fetchAlbumIds(artist_id)
 
-        print artist_name,album_id_list
+        #print artist_name,album_id_list
         if album_id_list == []:
-            print "Fuck it, Spoofy and its stupid returning me shit-nothin for albums. I don't need anything from", artist_name, "anyway. Fuck'em."
+            print "Fuck it, Spoofy and its stupid returning me shit-nothin. I don't need anything from", artist_name, "anyway. Fuck'em."
             continue #fuck it, I'm skipping this shit.
         random_album = random.choice(album_id_list)
         random_album_info = fetchAlbumInfo(random_album) 
@@ -88,7 +88,7 @@ def createNewPlaylist(inputName):
     #Add the songs to the songs table, with the appropriate playlist ID in the playlistId column of the new rows and the appropriate order in the songOrder column.
 
     for i in range(len(random_track_list)):
-        songOrder = i
+        songOrder = i+1
         Artist_Name = '"' + artist_names[i] + '"'
         Artist_Name.replace("\'","")
         Artist_Name.replace("\"","")
@@ -158,6 +158,9 @@ def add_playlist():
         # this code executes when someone fills out the form
         artistName = request.form['artistName']
         # YOUR CODE HERE
+
+        createNewPlaylist(artistName)
+
         return(redirect("/playlists/"))
 
 

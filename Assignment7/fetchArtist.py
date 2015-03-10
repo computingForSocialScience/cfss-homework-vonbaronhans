@@ -7,7 +7,7 @@ def fetchArtistId(name):
     and return a Spotify artist ID.
     """
     #make sure spaces in artist name are replaced with %20
-    artist_name_api = str.replace(name," ", "%20")
+    artist_name_api = str.replace(str(name)," ", "%20")
     url = "https://api.spotify.com/v1/search?q=" + artist_name_api + "&type=artist"
     req = requests.get(url)
     if req.ok == False: 
