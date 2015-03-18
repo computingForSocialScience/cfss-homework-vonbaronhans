@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>Results Page</title>
+    <link rel="stylesheet" href="http://cdn.pydata.org/bokeh-0.7.1.min.css" type="text/css" />
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh-0.7.1.min.js"></script>
+    {{ figJS|safe }}
+    <style> 
+	    <!--
+	        th {
+	            font: bold 100% "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	            border-right: 1px solid #C1DAD7;
+	            border-bottom: 1px solid #C1DAD7;
+	            border-top: 1px solid #C1DAD7;
+	            text-align: left;
+	            padding: 6px 6px 6px 12px;
+	            background: #CAE8EA;
+	        }
+	        .dataTable td {
+	            font: 120% "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	            border-right: 1px solid #C1DAD7;
+	            border-bottom: 1px solid #C1DAD7;
+	            background: #fff;
+	            padding: 6px 6px 6px 12px;
+	        }
+	    -->
+	</style>
+</head>
+<body>
+<img src="http://hep.uchicago.edu/~dschmitz/images/UChicago_logo.jpg" height=121 width=496>
+<img src="https://cdn.tutsplus.com/vector/uploads/legacy/tuts/165_Shiny_Dice/23.jpg" height=129  width=200>
+	<div class='bokeh'>
+    	{{ figDiv|safe }}
+    </div>
+
+	<div id='summaryTable' class='dataTable'>
+    	<h2>Summary Statistics</h2>
+    	<table>
+    		<tr>
+        		<th></th>
+        		<th>num. obs.</th>
+        		<th>mean</th>
+        		<th>min</th>
+        		<th>25%</th>
+        		<th>median</th>
+        		<th>75%</th>
+        		<th>max</th>
+    		</tr>
+	    
+        	<tr>
+            	<td>{{dv}}</td>
+            	<td>{{dvCount}}</td>
+            	<td>{{dvMean}}</td>
+            	<td>{{dvMin}}</td>
+            	<td>{{dv25}}</td>
+            	<td>{{dv50}}</td>
+            	<td>{{dv75}}</td>
+            	<td>{{dvMax}}</td>
+        	</tr>
+    	</table>
+	</div>
+<br>
+	<div id='ttestResults' class='dataTable'>
+		<h2>T-test Results</h2>
+		<table>
+			<tr>
+				<th></th>
+				<th>t-value</th>
+				<th>p-value</th>
+			</tr>
+
+			<tr>
+				<td>{{group1}} - {{group2}}</td>
+				<td>{{t_val}}</td>
+				<td>{{p_val}}</td>
+			</tr>
+
+		</table>
+	</div>
+<br>
+	<img src="http://www.ranklogos.com/wp-content/uploads/2012/06/University-of-Chicago-Logo.jpg" alt="awww yiss" height=250 width=250 align=middle>
+</body>

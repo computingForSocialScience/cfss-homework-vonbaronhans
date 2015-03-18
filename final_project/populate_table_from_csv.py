@@ -1,0 +1,23 @@
+# This Python file uses the following encoding: utf-8
+import pymysql
+import csv
+
+dbname="dicegame"
+host="localhost"
+user="root"
+passwd="computers"
+db=pymysql.connect(db=dbname, host=host, user=user,passwd=passwd, charset='utf8')
+
+cur = db.cursor()
+
+csv_data = csv.reader(file('Dice_Game_GainLoss__CompSalient_noduplicateheaders.csv'))
+for row in csv_data:
+
+    cur.execute('INSERT INTO dicegame(V1, V8, V9, V10, cond, Q325_1, Q325_1_TEXT, Q325_2, Q325_2_TEXT, Q2, Q4, Q207_1, Q314, Q316, Q318, Q319_1, Q320, Q321, Q322, Q323, Q324_1, Q325, LS11, LS12, LS13, LS14, LS15, LS16, LS17, LS18, LS19, LS20, LS21, LS22, LS23, LS24, LS25, LS26, LS27, LS28, LS29, LS30, LS31, LS32, LS33, LS34, LS35, LS36, LS37, LS38, LS39, LS40, LS41, LS42, LS43, LS44, LS45, LS46, LS47, LS48, LS49, LS50, LS51, LS52, LS53, LS54, LS55, LS56, LS57, LS58, LS59, LS60, LS61, LS62, LS63, LS64, Ls65, LS66, LS67, LS68, LS69, LS70, LS71, LS72, LS73, LS74, LS75, LS76, LS77, LS78, LS79, LS80, LS81, LS82, LS83, LS84, LS85, LS86, LS87, LS88, LS89, LS90, LS91, LS92, LS93, LS94, LS95, LS96, LS97_1, LS97, LS98, LS99, Q319, LC1, LC2, LC3_1, LC4_1, Q197, LC3, LC4, LC5, LC6, LC7, LC8, LC9, LC10, LC11, Q198, LC12, LC13, LC14, LC15, LC16, LC17, LC18, LC19, LC20, Q200, LC21, LC22, LC23, LC24, LC25, LC26, LC27, LC28, LC29, Q201, LC30, LC31, LC32, LC33, LC34, LC35, LC36, LC37, LC38, Q202, LC39, LC40, LC41, LC42, LC43, LC44_1, LC44, LC45, LC46, Q203, LC47, LC48, LC49, LC50, LC51, LC52, LC53, LC54, LC55, Q204, LC56, LC57, LC58, LC59, LC60, LC61, LC62, LC63, LC64, Q205, LC65, LC66, LC67, LC68, LC69, LC70, LC71, LC72, LC73, Q206, LC74, LC75, LC76, LC77, LC78, LC79, LC80, LC81, LC82, Q207_2, LC83, LC84, LC85, LC86, LC87, LC88, Q207, GCD, GC1, GC2, GC3, GC4, Q93, Q95, Q98, Q97, Q101, Q103, GC5, GC6, GC7, GC8, GC9, GC10, GC11, GC12, GC13, GC14, GC15, GC16, GC17, GC18, GC19, GC20, GC21, GC22, GC23, GC24, GC25, GC26, GC27, GC28, GC29, GC30, GC31, GC32, GC33, CG34, Q127, GSD, GS1, GS2, GS3, GS4, GS5, GS6_1, GS6, GS7, GS8_1, GS8, GS9_1, GS9, GS10, GS11, GS12, GS13, GS14, GS15, GS16, GS17, GS18, GS19, GS20, GS21, GS22, GS23, GS24, GS25, GS26, GS27, GS28, GS29, GS30, GS31, GS32, GS33, GS34, GS35, GS36, GS37, Q128, Q114, Q114_TEXT, Q118, Q120, Q124_1, Q124_2, Q124_3, Q124_4, Q124_5, Q124_6, Q134_1, Q134_2, Q134_3, Q134_4, Q134_5, Q134_6, Q138_1_TEXT, Q138_2_TEXT, Q138_3_TEXT, Q138_4_TEXT, Q140, Q144, Q146, Q324, LocationLatitude, LocationLongitude, LocationAccuracy)' \
+          'VALUES("%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s")', 
+          row)
+#close the connection to the database.
+db.commit()
+cur.close()
+db.close()
+print "table 'dicegame' successfully populated"

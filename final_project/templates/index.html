@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+    <title>Welcome to the Dice Game Study Presentation</title>
+    <style> 
+        <!--
+            th {
+                font: bold 100% "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+                border-right: 1px solid #C1DAD7;
+                border-bottom: 1px solid #C1DAD7;
+                border-top: 1px solid #C1DAD7;
+                text-align: center;
+                padding: 6px 6px 6px 12px;
+                background: #CAE8EA;
+                empty-cells: show;
+            }
+            .dataTable td {
+                font: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+                border-right: 1px solid #C1DAD7;
+                border-bottom: 1px solid #C1DAD7;
+                border-top: 1px solid #C1DAD7;
+                text-align: center;
+                background: #fff;
+                padding: 6px 6px 6px 12px;
+            }
+        -->
+    </style>
+</head>
+
+<body>
+<img src="http://hep.uchicago.edu/~dschmitz/images/UChicago_logo.jpg" height=121 width=496>
+<img src="https://cdn.tutsplus.com/vector/uploads/legacy/tuts/165_Shiny_Dice/23.jpg" height=129  width=200><br>
+<h1><b>The Dice Study</b></h1>
+<h2><i>A study on valuations of economic decisions</i></h2>
+
+<h2><b><ins>Study Objective:</ins></b></h2>
+<p>A behavioral intervention to nudge people towards maximizing the expected value of economic decisions instead of relying on suboptimal heuristics.</p>
+
+<h2><b><ins>The Experiment:</ins></b></h2>
+<p>Participants played a dice rolling game in which they guessed (or <i>bet</i>) what number they thought might be the outcome of a single die roll (<i>i.e.</i>, 1, 2, 3, 4, 5, or 6).  After guessing a number, they rolled the die. If their guess and the number they rolled were the same (<i>e.g.</i>, they guessed 4 and rolled 4), they earned that amount in quarters (<i>e.g.</i>, 4 quarters). If they did not correctly guess the number, they won nothing.</p>
+
+<div>
+    <table>
+        <h3>Participant Breakdown</h3>
+        <tr>
+            <td></td>
+            <th>Gain</th>
+            <th>Loss</th>
+        </tr>
+        <tr>
+            <th>Salient</th>
+            <td>46</td>
+            <td>41</td>
+        </tr>
+        <tr>
+            <th>Computer</th>
+            <td>46</td>
+            <td>49</td>
+        </tr>
+    </table>
+</div>
+ 
+<h2><b><ins>The data:</ins></b></h2>
+<p>182 participants played the dice rolling game for a total of 10 rounds. The independent variables are the framing of the game (<i>i.e.</i>, the game was presented as a either a potential <i><ins>loss</ins></i> or an uncertain <i><ins>gain</ins></i>) and the salience of the quarters they used to play (<i>i.e.</i>, if the quarters were <i><ins>salient</ins></i>, or handed to them directly after winning, versus electronic quarters allocated on <i><ins>computer</ins></i>). The dependent variable is the participant’s guess in each round. Have fun exploring our data!</p>
+
+    <form action="/results/" method="get">
+        <br>
+        
+        <label>
+            Group 1:
+            <select name="formGroup1">
+                <optgroup label="Main Conditions (for testing main effects)">
+                    <option value="Loss">Loss</option>
+                    <option value="Gain">Gain</option>
+                    <option value="Salient">Salient</option>
+                    <option value="Computer">Computer</option>
+                </optgroup>
+                <optgroup label="Combined Conditions (2x2 Quadrants)">
+                    <option value="LS">Loss Salient</option>
+                    <option value="LC">Loss Computer</option>
+                    <option value="GS">Gain Salient</option>
+                    <option value="GC">Gain Computer</option>
+                </optgroup>
+            </select>
+        </label>
+        <br>
+        <label>
+            Group 2:
+            <select name="formGroup2">
+                <optgroup label="Main Conditions (for testing main effects)">
+                    <option value="Loss">Loss</option>
+                    <option value="Gain">Gain</option>
+                    <option value="Salient">Salient</option>
+                    <option value="Computer">Computer</option>
+                </optgroup>
+                <optgroup label="Combined Conditions (2x2 Quadrants)">
+                    <option value="LS">Loss Salient</option>
+                    <option value="LC">Loss Computer</option>
+                    <option value="GS">Gain Salient</option>
+                    <option value="GC">Gain Computer</option>
+                </optgroup>
+            </select>
+        </label>
+        <br>
+        <label>
+            Dependent Variable:
+            <select name="formDv"
+                <optgroup label="Bets">
+                    <option value="bet1">Bet 1</option>
+                    <option value="bet2">Bet 2</option>
+                    <option value="bet3">Bet 3</option>
+                    <option value="bet4">Bet 4</option>
+                    <option value="bet5">Bet 5</option>
+                    <option value="bet6">Bet 6</option>
+                    <option value="bet7">Bet 7</option>
+                    <option value="bet8">Bet 8</option>
+                    <option value="bet9">Bet 9</option>
+                    <option value="bet10">Bet 10</option>
+                </optgroup>
+            </select>
+        </label>
+
+        <br>
+
+        <input type="submit" value="Submit!">
+
+    </form>
+<br>
+<img src="http://www.ranklogos.com/wp-content/uploads/2012/06/University-of-Chicago-Logo.jpg" alt="awww yiss" height=250 width=250 align=middle>
+</body>

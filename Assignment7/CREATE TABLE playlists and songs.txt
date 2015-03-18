@@ -1,12 +1,4 @@
-CREATE TABLE playlists (
+CREATE TABLE dice_game (
 id VARCHAR (32),
 rootArtist VARCHAR (256)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-CREATE TABLE songs (
-playlistId VARCHAR (32),
-songOrder VARCHAR (32),
-artistName VARCHAR (256),
-albumName VARCHAR (256),
-trackName VARCHAR (256)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
